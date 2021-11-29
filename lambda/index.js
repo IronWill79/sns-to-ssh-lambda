@@ -21,7 +21,8 @@ exports.handler = async (event, context) => {
       privateKey,
     })
     .then(function () {
-      ssh.execCommand('ls').then(function (result) {
+      ssh.execCommand('exit').then(function (result) {
+        console.log(result);
         return result;
       });
     });
