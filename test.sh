@@ -10,7 +10,6 @@ then
   set +o allexport
 
   aws lambda invoke --function-name $FUNCTION_NAME stdout.txt
-  cd ..
 
   set -o allexport
   source .env.example
