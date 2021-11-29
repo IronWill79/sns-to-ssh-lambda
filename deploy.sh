@@ -3,7 +3,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-if [ ! -f .env ]
+if [ -f .env ]
 then
   set -o allexport
   source .env
