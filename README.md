@@ -33,6 +33,10 @@
 1. Run `yarn` in the lambda folder to install simple-ssh dependency
 1. Copy the `.env.example` file to `.env` and set the variables
 
+## Credential Testing
+
+1. After adding the AWS credentials to the .env file, run `test.sh` to test if the connection is working
+
 ## Execution
 
 1. Run the `deploy.sh` script
