@@ -17,7 +17,6 @@ then
   set -o allexport
   source .env.example
   set +o allexport
-elif
-then
+else
   echo "No .env file found"
 fi
