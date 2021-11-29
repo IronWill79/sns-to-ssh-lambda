@@ -1,5 +1,7 @@
 # SNS to SSH Lambda function
 
+## !!! SSH won't complete a connection within the short time a Lambda function should run !!!
+
 ## Lambda Node Dependencies
 
 | Package  | Version | URL                                |
