@@ -8,9 +8,16 @@ then
   set -o allexport
   source .env
   set +o allexport
-fi
 
-cd lambda
-zip ../lambda.zip -x .gitignore -r .
-aws --profile $PROFILE_NAME --region $REGION lambda update-function-code --function-name $FUNCTION_NAME --zip-file fileb://../lambda.zip
-cd ..
+  cd lambda
+  zip ../lambda.zip -x .gitignore -r .
+  aws lambda update-function-code --function-name $FUNCTION_NAME --zip-file fileb://../lambda.zip
+  cd ..
+
+  set -o allexport
+  source .env.example
+  set +o allexport
+elif
+then
+  echo "No .env file found"
+fi
